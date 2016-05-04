@@ -1,0 +1,34 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <title>Untitled</title>
+  <meta charset="utf-8">
+  <style type="text/css">
+  #elements div{
+     display: none;
+  }
+  </style>
+    <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+    <script>
+$(function () {
+var divs = $('#elements div'), div;
+div = divs.eq(Math.floor(Math.random() * divs.length));
+div.show()
+         });
+    </script>
+</head>
+
+<body>
+ <div id="elements">
+    <div id="container1">
+           <a href="/"><img class="img" src="https://cloud.githubusercontent.com/assets/15712986/15021539/41b05700-1249-11e6-8d3e-2ded2e27514e.jpg"</img></a>
+    </div>
+    <div id="container2">
+        text 2
+    </div>
+    <div id="container3">
+        text 3
+    </div>
+</div>
+</body>
+</html>
