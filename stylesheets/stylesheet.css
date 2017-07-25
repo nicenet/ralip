@@ -465,7 +465,7 @@ img {
 }
 
 @media (max-width: 500px) {
-    .wrapper 
+    body 
         -moz-transform:  scale(0.7);
         -ms-transform:  scale(0.7);
         -webkit-transform:  scale(0.7);
