@@ -433,13 +433,13 @@ body {
   line-height: 1.5;
   background: #D1D1D1;
 }
-    @media (max-width: 675px) {
+    @media (max-width: 900px) {
         .wrapper {
-        -moz-transform:  scale(0.7);
-        -ms-transform:  scale(0.7);
-        -webkit-transform:  scale(0.7);
-        -o-transform:  scale(0.7);
-        transform:  scale(0.7);
+        -moz-transform:  scale(0.1);
+        -ms-transform:  scale(0.1);
+        -webkit-transform:  scale(0.1);
+        -o-transform:  scale(0.1);
+        transform:  scale(0.1);
     }
      }
 
