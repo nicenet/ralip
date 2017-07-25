@@ -433,16 +433,11 @@ body {
   line-height: 1.5;
   background: #D1D1D1;
 }
-    @media (max-width: 900px) {
-        .wrapper {
-        -moz-transform:  scale(0.1);
-        -ms-transform:  scale(0.1);
-        -webkit-transform:  scale(0.1);
-        -o-transform:  scale(0.1);
-        transform:  scale(0.1);
-    }
-     }
-
+    
+.wrapper {
+  width: 675px;
+  margin: 0 auto;
+}
 
 a {
   color: #63a52a;
