@@ -12,16 +12,6 @@ html {
   -webkit-text-size-adjust: 100%; /* 2 */
 }
 
-@media (max-width: 900px) {
-        .body {
-        -moz-transform:  scale(0.1);
-        -ms-transform:  scale(0.1);
-        -webkit-transform:  scale(0.1);
-        -o-transform:  scale(0.1);
-        transform:  scale(0.1);
-    }
-     }
-
 body {
   margin: 0;
 }
