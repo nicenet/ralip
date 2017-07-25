@@ -12,6 +12,10 @@ html {
   -webkit-text-size-adjust: 100%; /* 2 */
 }
 
+body {
+  margin: 0;
+}
+
 /**
  * Remove default margin.
  */
@@ -423,16 +427,14 @@ th {
 
 /* Style */
 
-@media screen {
 body {
   font-size: 15px;
   font-family: Arial, Arial, Helvetica, sans-serif;
   line-height: 1.5;
   background: #D1D1D1;
 }
-}
-   @media (max-width: 400px) {
-        body {
+    @media (max-width: 400px) {
+        center {
         -moz-transform:  scale(0.7);
         -ms-transform:  scale(0.7);
         -webkit-transform:  scale(0.7);
