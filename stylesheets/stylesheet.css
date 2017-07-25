@@ -458,7 +458,7 @@ h1.title {
   margin: 30px 20px 10px;
   text-align: center;
   display: block;
-  max-width: auto;
+  max-width: 40%;
 }
 
 .wrapper {
