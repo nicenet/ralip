@@ -464,18 +464,17 @@ img {
     max-width: 100%;
 }
 
-@media (max-width: 500px) {
-    body 
+.wrapper {
+  width: 675px;
+  margin: 0 auto;
+  @media (max-width: 400px) {
+        .wrapper
         -moz-transform:  scale(0.7);
         -ms-transform:  scale(0.7);
         -webkit-transform:  scale(0.7);
         -o-transform:  scale(0.7);
         transform:  scale(0.7);
     }
-
-.wrapper {
-  width: 675px;
-  margin: 0 auto;
 }
 
 #container {
