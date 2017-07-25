@@ -464,6 +464,16 @@ img {
     max-width: 100%;
 }
 
+}
+@media (max-height: 600px) {
+    .wrapper 
+        -moz-transform:  scale(0.7);
+        -ms-transform:  scale(0.7);
+        -webkit-transform:  scale(0.7);
+        -o-transform:  scale(0.7);
+        transform:  scale(0.7);
+    }
+
 .wrapper {
   width: 675px;
   margin: 0 auto;
