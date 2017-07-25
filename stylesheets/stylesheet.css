@@ -457,12 +457,10 @@ h1.title {
 .images {
   margin: 30px 20px 10px;
   text-align: center;
-  display: block;
-  max-width: 40%;
 }
 
 .wrapper {
-  width: 675px;
+  width: 100%;
   margin: 0 auto;
 }
 
