@@ -459,9 +459,13 @@ h1.title {
   text-align: center;
 }
 
+img {
+    display: block;
+    max-width: 100%;
+}
+
 .wrapper {
-  display: block;
-  max-width: 100%;
+  width: 675px;
   margin: 0 auto;
 }
 
