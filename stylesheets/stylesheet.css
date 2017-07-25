@@ -433,8 +433,8 @@ body {
   line-height: 1.5;
   background: #D1D1D1;
 }
-    @media (max-width: 400px) {
-        center {
+    @media (max-width: 675px) {
+        html {
         -moz-transform:  scale(0.7);
         -ms-transform:  scale(0.7);
         -webkit-transform:  scale(0.7);
