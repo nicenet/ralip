@@ -430,8 +430,6 @@ body {
   font-family: Arial, Arial, Helvetica, sans-serif;
   line-height: 1.5;
   background: #D1D1D1;
-  width: auto; 
-  height: 100%;
 }
 
 
@@ -460,7 +458,7 @@ h1.title {
   margin: 30px 20px 10px;
   text-align: center;
   display: block;
-  max-width: 100%;
+  max-width: auto;
 }
 
 .wrapper {
