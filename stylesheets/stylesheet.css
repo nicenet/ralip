@@ -434,7 +434,7 @@ body {
   background: #D1D1D1;
 }
     @media (max-width: 675px) {
-        html {
+        .wrapper {
         -moz-transform:  scale(0.7);
         -ms-transform:  scale(0.7);
         -webkit-transform:  scale(0.7);
