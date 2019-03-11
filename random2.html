@@ -18,18 +18,70 @@ div#rotator ul li.show {z-index:500;}
 </style>
 	  
 <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
- <script type="text/javascript">
+<script>
+	  $(document).ready(function() {		
+	// Выбрать show из списка
+	setRandomClass();
+
+});
+
+
+
+
+
+
+  $(document).ready(function() {		
+	// Сразу включить следующую картинку
+
+            firstrotate();
+
+
+        
+});
+
+
+
+function firstrotate() {	
  
- function rotate() {	
-	$('div#rotator ul li').css({opacity: 0.0});
-	 
-	 $(function() {
+		// Берем первую картинку
+	var current = ($('div#rotator ul li.show')?  $('div#rotator ul li.show') : $('div#rotator ul li:first'));
+ 
+	// Берем следующую картинку, когда дойдем до последней начинаем с начала
+	 var next = ((current.next().length) ? ((current.next().hasClass('show')) ? $('div#rotator ul li:first') :current.next()) : $('div#rotator ul li:first'));	
+ 
+	 Расскомментируйте, чтобы показвать картинки в случайном порядке
+	 var sibs = current.siblings();
+	 var rndNum = Math.floor(Math.random() * sibs.length );
+	 var next = $( sibs[ rndNum ] );
+ 
+	// Подключаем эффект растворения/затухания для показа картинок, css-класс show имеет больший z-index
+	 next.css({opacity: 1.0})
+	 .addClass('show')
+	.animate({opacity: 1.0});
+        
+	// Прячем текущую картинку
+	current.animate({opacity: 0.0})
+ 	.removeClass('show');
+
+
+$(function() {
     $('div#rotator ul li.show img:first').each(function() {
         $(this).attr('src', $(this).data('src'));    
     })
 });
-	 
-	 function setRandomClass() {
+
+};
+
+
+
+
+
+
+
+
+
+
+function setRandomClass() {
     var ul = $("ul");
     var items = ul.find("li");
     var number = items.length;
@@ -38,37 +90,7 @@ div#rotator ul li.show {z-index:500;}
     items.eq(random).addClass("show");
 
 }
-	 
-	var current = ($('div#rotator ul li.show')?  $('div#rotator ul li.show') : $('div#rotator ul li:first'));
- 
-
-	var next = ((current.next().length) ? ((current.next().hasClass('show')) ? $('div#rotator ul li:first') :current.next()) : $('div#rotator ul li:first'));	
- 
-
-	var sibs = current.siblings();
-	var rndNum = Math.floor(Math.random() * sibs.length );
-	var next = $( sibs[ rndNum ] );
-
-	next.css({opacity: 0.0})
-	.addClass('show')
-	.animate({opacity: 1.0}, 0);
-
-	current.animate({opacity: 0.0}, 0)
-	.removeClass('show');
-	 
-};
- 
-$(document).ready(function() {		
-
-	rotate();
-});
-	 
-	 $(document).ready(function() {		
 	
-	setRandomClass();
-
-});
- 
 </script>
 </head>
 
