@@ -23,23 +23,69 @@ div#rotator ul li.show {z-index:500;}
 $(document).ready(function() {		
 	// Выбрать show из списка
 	setRandomClass();
-	
-
 
 });
 
 
+
+
+
+
+  $(document).ready(function() {		
+	// Сразу включить следующую картинку
+
+            firstrotate();
+
+
+        
+});
+
+
+
+function firstrotate() {	
+ 
+		// Берем первую картинку
+	var current = ($('div#rotator ul li.show')?  $('div#rotator ul li.show') : $('div#rotator ul li:first'));
+ 
+	// Берем следующую картинку, когда дойдем до последней начинаем с начала
+	 var next = ((current.next().length) ? ((current.next().hasClass('show')) ? $('div#rotator ul li:first') :current.next()) : $('div#rotator ul li:first'));	
+ 
+	
+	 var sibs = current.siblings();
+	var rndNum = Math.floor(Math.random() * sibs.length );
+	 var next = $( sibs[ rndNum ] );
+ 
+	// Подключаем эффект растворения/затухания для показа картинок, css-класс show имеет больший z-index
+	 next.css({opacity: 1.0})
+	 .addClass('show')
+	.animate({opacity: 1.0});
+        
+	// Прячем текущую картинку
+	current.animate({opacity: 0.0})
+ 	.removeClass('show');
+
+
+$(function() {
+    $('div#rotator ul li.show img:first').each(function() {
+        $(this).attr('src', $(this).data('src'));    
+    })
+});
+
+
+};
+
+
 function setRandomClass() {
-	$("img").each(function() {
-    
-        $(this).attr("data-src",$(this).attr("src"));
-        $(this).removeAttr("src");
+    var ul = $("ul");
+    var items = ul.find("li");
+    var number = items.length;
+    var random = Math.floor((Math.random() * number));
+    items.removeClass("show");
+    items.eq(random).addClass("show");
 
 }
-	
-
-	
 </script>
+
 
 
 
@@ -61,9 +107,9 @@ function setRandomClass() {
               <div class="thumbnail">
 		  <div id="rotator">
   <ul>
-    <li class="show"><img src="https://cloud.githubusercontent.com/assets/15712986/15046681/e0ed8ebe-1302-11e6-8d57-d81703d3755e.jpg"</img></li>
-  <li> <img src="https://cloud.githubusercontent.com/assets/15712986/15047934/fbdba67e-1308-11e6-9ce3-4e64d18588ff.jpg"></img></li>
- <li> <img src="https://cloud.githubusercontent.com/assets/15712986/15047972/230983c4-1309-11e6-95aa-e59e6b807622.jpg"></img></li>
+    <li class="show"><img data-src="https://cloud.githubusercontent.com/assets/15712986/15046681/e0ed8ebe-1302-11e6-8d57-d81703d3755e.jpg"</img></li>
+  <li> <img data-src="https://cloud.githubusercontent.com/assets/15712986/15047934/fbdba67e-1308-11e6-9ce3-4e64d18588ff.jpg"></img></li>
+ <li> <img data-src="https://cloud.githubusercontent.com/assets/15712986/15047972/230983c4-1309-11e6-95aa-e59e6b807622.jpg"></img></li>
 
 		  
 </ul>   </div>
