@@ -14,7 +14,7 @@
     <link href="css/custom-styles.css" rel="stylesheet">
     
 <style type="text/css">
-div#rotator ul li.show {z-index:500;}	
+div#rotator ul rl.show {z-index:500;}	
 </style>
 	  
 <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
@@ -45,10 +45,10 @@ $(document).ready(function() {
 function firstrotate() {	
  
 		// Берем первую картинку
-	var current = ($('div#rotator ul li.show')?  $('div#rotator ul li.show') : $('div#rotator ul li:first'));
+	var current = ($('div#rotator ul rl.show')?  $('div#rotator ul rl.show') : $('div#rotator ul rl:first'));
  
 	// Берем следующую картинку, когда дойдем до последней начинаем с начала
-	 var next = ((current.next().length) ? ((current.next().hasClass('show')) ? $('div#rotator ul li:first') :current.next()) : $('div#rotator ul li:first'));	
+	 var next = ((current.next().length) ? ((current.next().hasClass('show')) ? $('div#rotator ul rl:first') :current.next()) : $('div#rotator ul rl:first'));	
  
 	
 	 var sibs = current.siblings();
@@ -66,7 +66,7 @@ function firstrotate() {
 
 
 $(function() {
-    $('div#rotator ul li.show img:first').each(function() {
+    $('div#rotator ul rl.show img:first').each(function() {
         $(this).attr('src', $(this).data('src'));    
     })
 });
@@ -77,7 +77,7 @@ $(function() {
 
 function setRandomClass() {
     var ul = $("ul");
-    var items = ul.find("li");
+    var items = ul.find("rl");
     var number = items.length;
     var random = Math.floor((Math.random() * number));
     items.removeClass("show");
@@ -107,9 +107,9 @@ function setRandomClass() {
               <div class="thumbnail">
 		  <div id="rotator">
   <ul>
-    <li class="show"><img data-src="https://cloud.githubusercontent.com/assets/15712986/15046681/e0ed8ebe-1302-11e6-8d57-d81703d3755e.jpg"</img></li>
-  <li> <img data-src="https://cloud.githubusercontent.com/assets/15712986/15047934/fbdba67e-1308-11e6-9ce3-4e64d18588ff.jpg"></img></li>
- <li> <img data-src="https://cloud.githubusercontent.com/assets/15712986/15047972/230983c4-1309-11e6-95aa-e59e6b807622.jpg"></img></li>
+    <rl class="show"><img data-src="https://cloud.githubusercontent.com/assets/15712986/15046681/e0ed8ebe-1302-11e6-8d57-d81703d3755e.jpg"</img></rl>
+  <rl> <img data-src="https://cloud.githubusercontent.com/assets/15712986/15047934/fbdba67e-1308-11e6-9ce3-4e64d18588ff.jpg"></img></rl>
+ <rl> <img data-src="https://cloud.githubusercontent.com/assets/15712986/15047972/230983c4-1309-11e6-95aa-e59e6b807622.jpg"></img></rl>
 
 		  
 </ul>   </div>
