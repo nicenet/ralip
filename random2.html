@@ -39,6 +39,11 @@ div#rotator ul li.show {z-index:500;}
 
 	current.animate({opacity: 0.0}, 0)
 	.removeClass('show');
+	 
+	 $(function() {
+    $('div#rotator ul li.show img:first').each(function() {
+        $(this).attr('src', $(this).data('src'));    
+    })
 };
  
 $(document).ready(function() {		
