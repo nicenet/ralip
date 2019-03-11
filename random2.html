@@ -34,7 +34,14 @@ $(document).ready(function() {
 
 });
 
+ $(document).ready(function() {		
+	// Сразу включить следующую картинку
 
+            firstrotate();
+
+
+        
+});
 
 
 
@@ -45,23 +52,18 @@ $(document).ready(function() {
 
 function firstrotate() {	
  
-		// Берем первую картинку
 	var current = ($('div#random ul rl.show')?  $('div#random ul rl.show') : $('div#random ul rl:first'));
  
-	// Берем следующую картинку, когда дойдем до последней начинаем с начала
 	 var next = ((current.next().length) ? ((current.next().hasClass('show')) ? $('div#random ul rl:first') :current.next()) : $('div#random ul rl:first'));	
  
 	
 	 var sibs = current.siblings();
 	var rndNum = Math.floor(Math.random() * sibs.length );
 	 var next = $( sibs[ rndNum ] );
- 
-	// Подключаем эффект растворения/затухания для показа картинок, css-класс show имеет больший z-index
 	 next.css({opacity: 1.0})
 	 .addClass('show')
 	.animate({opacity: 1.0});
         
-	// Прячем текущую картинку
 	current.animate({opacity: 0.0})
  	.removeClass('show');
 
@@ -124,7 +126,7 @@ function setRandomClass() {
 <script>
 (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
-                <br /><a href="/random2" target="_top"><img src="https://user-images.githubusercontent.com/15712986/28327211-36289eb6-6bfc-11e7-97b5-bab45239ef8d.png"</img></a>
+                <div class="thumbnail"><br /><a href="/random2" target="_top"><img src="https://user-images.githubusercontent.com/15712986/28327211-36289eb6-6bfc-11e7-97b5-bab45239ef8d.png"</img></a></div>
               </div>
               <br /><br /><br /><br /><br /><br />
               <b>Ralip.ru/random</b>
