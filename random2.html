@@ -29,6 +29,16 @@ div#rotator ul li.show {z-index:500;}
     })
 });
 	 
+	 function setRandomClass() {
+    var ul = $("ul");
+    var items = ul.find("li");
+    var number = items.length;
+    var random = Math.floor((Math.random() * number));
+    items.removeClass("show");
+    items.eq(random).addClass("show");
+
+}
+	 
 	var current = ($('div#rotator ul li.show')?  $('div#rotator ul li.show') : $('div#rotator ul li:first'));
  
 
@@ -51,6 +61,12 @@ div#rotator ul li.show {z-index:500;}
 $(document).ready(function() {		
 
 	rotate();
+});
+	 
+	 $(document).ready(function() {		
+	
+	setRandomClass();
+
 });
  
 </script>
