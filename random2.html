@@ -23,6 +23,11 @@ div#rotator ul li.show {z-index:500;}
 $(document).ready(function() {		
 	// Выбрать show из списка
 	setRandomClass();
+	
+	$("img").each(function() {
+    
+        $(this).attr("data-src",$(this).attr("src"));
+        $(this).removeAttr("src");
 
 });
 
@@ -37,11 +42,7 @@ function setRandomClass() {
 
 }
 	
-	$("img").each(function() {
-    
-        $(this).attr("data-src",$(this).attr("src"));
-        $(this).removeAttr("src");
-    });
+
 	
 </script>
 
