@@ -37,7 +37,10 @@ function rotate() {
 	var rndNum = Math.floor(Math.random() * sibs.length );
 	var next = $( sibs[ rndNum ] );
  
-
+next.css({opacity: 0.0})
+	.addClass('show')
+	.animate({opacity: 1.0}, 1000);
+ 
 	current.animate({opacity: 0.0}, 1000)
 	.removeClass('show');
 };
