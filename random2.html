@@ -40,11 +40,6 @@ div#rotator ul li.show {z-index:500;}
 	current.animate({opacity: 0.0}, 0)
 	.removeClass('show');
 	 
-$("img").each(function() {
-  var $this = $(this);
-  var src = $this.attr("src");
-  $this.attr( "data-src", src );
-  $this.removeAttr("src");
 }); 
  
 $(document).ready(function() {		
