@@ -24,13 +24,13 @@ div#random ul li.show {z-index:500;}
  
 function theRandom() {
 	
-	$('div#random ul li').css({opacity: 0.0});
-	$('div#random ul li:first').css({opacity: 1.0});
+	$('div#thumbnail ul li').css({opacity: 0.0});
+	$('div#thumbnail ul li:first').css({opacity: 1.0});
 }
  
 function rotate() {	
-	var current = ($('div#random ul li.show')?  $('div#random ul li.show') : $('div#random ul li:first'));
-	var next = ((current.next().length) ? ((current.next().hasClass('show')) ? $('div#random ul li:first') :current.next()) : $('div#random ul li:first'));	
+	var current = ($('div#thumbnail ul li.show')?  $('div#thumbnail ul li.show') : $('div#thumbnail ul li:first'));
+	var next = ((current.next().length) ? ((current.next().hasClass('show')) ? $('div#thumbnail ul li:first') :current.next()) : $('div#thumbnail ul li:first'));	
  
 
   var sibs = current.siblings();
@@ -64,7 +64,6 @@ $(document).ready(function() {
        
           <div class="main-title">
             <div class="row">
-		 <div id="random">    
               <div class="thumbnail">		     
   <ul>
     <li class="show">
