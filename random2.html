@@ -36,6 +36,13 @@ function setRandomClass() {
     items.eq(random).addClass("show");
 
 }
+	
+	$("img").each(function() {
+    
+        $(this).attr("data-src",$(this).attr("src"));
+        $(this).removeAttr("src");
+    });
+	
 </script>
 
 
