@@ -40,10 +40,7 @@ p:nth-last-child(1){
 a{ transition:all 1s; color: #a5a5a5;}
 a:hover{}
 img{}
- ul{
- 	padding-left: 0;
- 	list-style-position: inside;
- }
+
 /*---------------------------------------
   Bootsrap Styles Customized
 -----------------------------------------*/
