@@ -24,21 +24,16 @@ $(document).ready(function() {
 	// Выбрать show из списка
 	setRandomClass();
 	
-	$("img").each(function() {
-    
-        $(this).attr("data-src",$(this).attr("src"));
-        $(this).removeAttr("src");
+
 
 });
 
 
 function setRandomClass() {
-    var ul = $("ul");
-    var items = ul.find("li");
-    var number = items.length;
-    var random = Math.floor((Math.random() * number));
-    items.removeClass("show");
-    items.eq(random).addClass("show");
+	$("img").each(function() {
+    
+        $(this).attr("data-src",$(this).attr("src"));
+        $(this).removeAttr("src");
 
 }
 	
