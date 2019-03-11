@@ -22,34 +22,39 @@ div#random ul li.show {z-index:500;}
 <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
  <script type="text/javascript">
  
-function theRandom() {
-	
-	$('div#thumbnail ul li').css({opacity: 0.0});
-	$('div#thumbnail ul li:first').css({opacity: 1.0});
+function theRotator() {
+
+	$('div#rotator ul li').css({opacity: 0.0});
+
+	$('div#rotator ul li:first').css({opacity: 1.0});
 }
  
 function rotate() {	
-	var current = ($('div#thumbnail ul li.show')?  $('div#thumbnail ul li.show') : $('div#thumbnail ul li:first'));
-	var next = ((current.next().length) ? ((current.next().hasClass('show')) ? $('div#thumbnail ul li:first') :current.next()) : $('div#thumbnail ul li:first'));	
+	
+	var current = ($('div#rotator ul li.show')?  $('div#rotator ul li.show') : $('div#rotator ul li:first'));
  
 
-  var sibs = current.siblings();
+	var next = ((current.next().length) ? ((current.next().hasClass('show')) ? $('div#rotator ul li:first') :current.next()) : $('div#rotator ul li:first'));	
+ 
+
+	var sibs = current.siblings();
 	var rndNum = Math.floor(Math.random() * sibs.length );
 	var next = $( sibs[ rndNum ] );
- 
-next.css({opacity: 0.0})
+
+	next.css({opacity: 0.0})
 	.addClass('show')
 	.animate({opacity: 1.0}, 1000);
- 
+
 	current.animate({opacity: 0.0}, 1000)
 	.removeClass('show');
 };
  
 $(document).ready(function() {		
-	rotate();
+
+	theRotator();
 });
  
-</script>   
+</script>
 </head>
 
   <body>
@@ -64,12 +69,13 @@ $(document).ready(function() {
        
           <div class="main-title">
             <div class="row">
-              <div class="thumbnail">		     
+              <div class="thumbnail">
+		 <div id="rotator">
   <ul>
     <li class="show"><img src="https://cloud.githubusercontent.com/assets/15712986/15046681/e0ed8ebe-1302-11e6-8d57-d81703d3755e.jpg"</img></li>
   <li> <img src="https://cloud.githubusercontent.com/assets/15712986/15047934/fbdba67e-1308-11e6-9ce3-4e64d18588ff.jpg"></img></li>
 
-		    </ul>
+		      </ul></div>
 
                 
         <br /><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
