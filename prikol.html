@@ -34,8 +34,11 @@ div#randomprikol img {
 	  
 <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
 <script>
+$(document).ready(function() {		
+setRandomClass();
+});
+	
  $(document).ready(function() {		
-	// Сразу включить следующую картинку
             firstrotate();
         
 });
@@ -62,6 +65,15 @@ $(function() {
     })
 });
 };
+
+function setRandomClass() {
+    var ul = $("ul");
+    var items = ul.find("rl");
+    var number = items.length;
+    var random = Math.floor((Math.random() * number));
+    items.removeClass("show");
+    items.eq(random).addClass("show");
+}	
 </script>
 
 
