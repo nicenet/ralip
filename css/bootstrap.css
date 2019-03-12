@@ -774,7 +774,7 @@ pre code {
 
 .row {
   margin-right: 10px;
-  margin-left: -15px;
+  margin-left: -1px;
 }
 
 .row:before,
