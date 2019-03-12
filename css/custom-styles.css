@@ -192,7 +192,6 @@ border-radius: 5px;
 	border-radius: 0 5px 0 5px;
 }
 .main-title{
-padding: 40px 0;
 overflow: hidden;
 }
 .main-title h3{
@@ -202,7 +201,7 @@ overflow: hidden;
 
 .main-title .btn{
 	font-size: 20px;
-	margin-top: 20px;
+	margin-top: 6px;
 }
 .main-title .btn:hover{
 	background: #5c5c5c;
