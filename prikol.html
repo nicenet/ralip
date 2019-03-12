@@ -27,6 +27,74 @@ div#randomprikol img {
   margin-right: auto;
   margin-left: auto;
 }
+
+.container {
+  padding-right: 0px;
+  padding-left: 0px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.container:before,
+.container:after {
+  display: table;
+  content: " ";
+}
+
+.container:after {
+  clear: both;
+}
+
+.container:before,
+.container:after {
+  display: table;
+  content: " ";
+}
+
+.container:after {
+  clear: both;
+}
+
+.row {
+  margin-right: -1px;
+  margin-left: -1px;
+}
+
+.row:before,
+.row:after {
+  display: table;
+  content: " ";
+}
+
+.row:after {
+  clear: both;
+}
+
+.row:before,
+.row:after {
+  display: table;
+  content: " ";
+}
+
+.row:after {
+  clear: both;
+}	
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 750px;
+}
+
+@media (min-width: 992px) {
+  
+  .container {
+    max-width: 970px;
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1170px;
+}	
 </style>
 	  
 <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
