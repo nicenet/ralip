@@ -1,5 +1,17 @@
 <html>
 <head>
+	<script type="text/javascript">
+<!--
+function viewdiv(id){
+var el=document.getElementById(id);
+if(el.style.display=="block"){
+el.style.display="none";
+} else {
+el.style.display="block";
+}
+}
+//-->
+</script>
 	<title>DEDSEC</title>
    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
   <link rel="stylesheet" href="/resources/demos/style.css">
@@ -20,8 +32,8 @@
 }
   </style>
 <body>
-<div id="draggable" class="ui-widget-content">
-<font>C:\Windows\system32\cmd.exe</font>
+<div id="draggable" class="ui-widget-content style="display:block;">
+<font>C:\Windows\system32\cmd.exe</font><a href="javascript:void(0);" onclick="viewdiv('mydiv');">Скрыть блок</a>
 <font>      </font><iframe src="http://hackertyper.com/"; width="1120" height="470"></iframe>
 </div>
 </body>
