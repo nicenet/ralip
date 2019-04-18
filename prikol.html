@@ -94,7 +94,9 @@ $(function() {
 		      <div id="random">
   <ul>
 <rl class="show"><img data-src="http://ralip.ru/prikol/1.jpg" /></rl>
-<script>
+	  <script>
+$(document).ready(function() {
+
 var max1 = 1000;
 var min1 = 1;
 
@@ -114,6 +116,9 @@ var random3 = Math.floor((Math.random() * ((max3 + 1) - min3)) + min3);
 document.write("<rl><img data-src='http://ralip.ru/prikol/" + random1 + ".jpg' /></rl>");
 document.write("<rl><img data-src='http://ralip.ru/prikol2/" + random2 + ".jpg' /></rl>");
 document.write("<rl><img data-src='http://ralip.ru/prikol3/" + random3 + ".jpg' /></rl>");
+   
+});
+
 </script>	  
 	  
 
