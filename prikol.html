@@ -65,6 +65,7 @@ function firstrotate() {
 $(function() {
     $('div#random ul rl.show img:first').each(function() {
         $(this).attr('src', $(this).data('src')); 
+	 $('div#like').attr('data-title', like);	   
     })
 		
 });
@@ -72,8 +73,7 @@ $(function() {
 	
 
 	$(window).load(function() {
-    $.getScript("http://w.uptolike.com/widgets/v1/uptolike.js");
-    $('div#like').attr('data-title', like);	
+    $.getScript("http://w.uptolike.com/widgets/v1/uptolike.js");    
 });
 	
 </script>
