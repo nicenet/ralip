@@ -3470,8 +3470,65 @@ $(function() {
 <rl><img data-src="/prikol4/3369.jpg"/></rl>
 		  
 </ul>   </div>
-         <br />
+	
 	<div id="like" class="rw-ui-container" data-title=""></div>
+	
+	<script type="text/javascript">(function(d, t, e, m){
+    
+    // Async Rating-Widget initialization.
+    window.RW_Async_Init = function(){
+                
+        RW.init({
+            huid: "430965",
+            uid: "625a4ce8efb017aa993d03c12eb96b98",
+            source: "website",
+            options: {
+                "advanced": {
+                    "layout": {
+                        "lineHeight": "26px"
+                    },
+                    "nero": {
+                        "showDislike": false
+                    },
+                    "font": {
+                        "hover": {
+                            "color": "#FFFFFF"
+                        },
+                        "size": "24px",
+                        "color": "#FFFFFF",
+                        "type": "arial"
+                    },
+                    "text": {
+                        "rateThis": "",
+                        "like": "Прикольно"
+                    }
+                },
+                "size": "large",
+                "type": "nero",
+                "label": {
+                    "background": "#FFFFFF"
+                },
+                "lng": "ru",
+                "style": "thumbs_bp",
+                "isDummy": false
+            } 
+        });
+        RW.render();
+    };
+        // Append Rating-Widget JavaScript library.
+    var rw, s = d.getElementsByTagName(e)[0], id = "rw-js",
+        l = d.location, ck = "Y" + t.getFullYear() + 
+        "M" + t.getMonth() + "D" + t.getDate(), p = l.protocol,
+        f = ((l.search.indexOf("DBG=") > -1) ? "" : ".min"),
+        a = ("https:" == p ? "secure." + m + "js/" : "js." + m);
+    if (d.getElementById(id)) return;              
+    rw = d.createElement(e);
+    rw.id = id; rw.async = true; rw.type = "text/javascript";
+    rw.src = p + "//" + a + "external" + f + ".js?ck=" + ck;
+    s.parentNode.insertBefore(rw, s);
+    }(document, new Date(), "script", "rating-widget.com/"));</script>
+	
+	
         <br /><script type="text/javascript">
     google_ad_client = "ca-pub-3889826012722473";
     google_ad_slot = "7221893364";
