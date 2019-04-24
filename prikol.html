@@ -54,6 +54,7 @@ function firstrotate() {
 	
 	 var sibs = current.siblings();
 	var rndNum = Math.floor(Math.random() * sibs.length );
+	var like = rndNum + 2;
 	 var next = $( sibs[ rndNum ] );
 	 next.css({opacity: 1.0})
 	 .addClass('show')
@@ -63,7 +64,7 @@ function firstrotate() {
  	.removeClass('show');
 $(function() {
     $('div#random ul rl.show img:first').each(function() {
-        $(this).attr('src', $(this).data('src'));    
+        $(this).attr('src', $(this).data('src')); 
     })
 		
 });
@@ -72,6 +73,7 @@ $(function() {
 
 	$(window).load(function() {
     $.getScript("http://w.uptolike.com/widgets/v1/uptolike.js");
+    $('div#like').attr('data-title', like);	
 });
 	
 </script>
@@ -3468,7 +3470,8 @@ $(function() {
 <rl><img data-src="/prikol4/3369.jpg"/></rl>
 		  
 </ul>   </div>
-                   
+         <br />
+	<div id="like" class="rw-ui-container" data-title=""></div>
         <br /><script type="text/javascript">
     google_ad_client = "ca-pub-3889826012722473";
     google_ad_slot = "7221893364";
