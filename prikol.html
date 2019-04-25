@@ -54,6 +54,7 @@ function firstrotate() {
 	
 	 var sibs = current.siblings();
 	var rndNum = Math.floor(Math.random() * sibs.length );
+	var like = rndNum + 2;
 	 var next = $( sibs[ rndNum ] );
 	 next.css({opacity: 1.0})
 	 .addClass('show')
@@ -64,6 +65,7 @@ function firstrotate() {
 $(function() {
     $('div#random ul rl.show img:first').each(function() {
         $(this).attr('src', $(this).data('src')); 
+	$('span#like').attr('data-title', like);
     })
 		
 });
@@ -3744,7 +3746,10 @@ $(function() {
 		  
 </ul>   </div>
 	
-	
+	<!-- LikeBtn.com BEGIN -->
+<span id="like" class="likebtn-wrapper" data-theme="custom" data-btn_size="26" data-f_size="22" data-icon_size="22" data-icon_l="sml3-h" data-icon_l_url="/images/smile.gif" data-icon_l_url_v="/images/yes.gif" data-f_family="Impact" data-lang="ru" data-i18n_like="Прикольно" data-identifier="like" data-show_like_label="false" data-dislike_enabled="false" data-icon_dislike_show="false" data-popup_position="right" data-popup_width="10" data-share_size="small" data-loader_show="true" data-i18n_like_tooltip="Прикольно" data-i18n_unlike_tooltip="Отменить" data-i18n_share_text="Спасибо!" data-i18n_popup_text="Спасибо!"></span>
+<script>(function(d,e,s){if(d.getElementById("likebtn_wjs"))return;a=d.createElement(e);m=d.getElementsByTagName(e)[0];a.async=1;a.id="likebtn_wjs";a.src=s;m.parentNode.insertBefore(a, m)})(document,"script","//w.likebtn.com/js/w/widget.js");</script>
+<!-- LikeBtn.com END -->
 	
 	
         <br /><script type="text/javascript">
