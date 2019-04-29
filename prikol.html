@@ -66,6 +66,7 @@ $(function() {
     $('div#random ul rl.show img:first').each(function() {
         $(this).attr('src', $(this).data('src'));  
 	$('span#like').attr('data-identifier', like);
+	$('span.lb-a').attr('onclick', "LikeBtn.vote(1, 0, event); LikeBtn.popupHide(event, 0);");	    
     })
 		
 });
@@ -74,7 +75,6 @@ $(function() {
 
 	$(window).load(function() {
     $.getScript("http://w.uptolike.com/widgets/v1/uptolike.js");
-    $('span.lb-a').attr('onclick', "LikeBtn.vote(1, 0, event); LikeBtn.popupHide(event, 0);");	
 });
 	
 </script>
