@@ -49,22 +49,30 @@ var min2 = 1001;
 	 
 var max3 = 3000;
 var min3 = 2001;
+
+var max4 = 4000;
+var min4 = 3001;
+
+var max5 = 4023;
+var min5 = 4001;
 	
 var random1 = Math.floor((Math.random() * ((max1 + 1) - min1)) + min1);
 var random2 = Math.floor((Math.random() * ((max2 + 1) - min2)) + min2);
 var random3 = Math.floor((Math.random() * ((max3 + 1) - min3)) + min3);
-
+var random4 = Math.floor((Math.random() * ((max4 + 1) - min4)) + min4);
+var random5 = Math.floor((Math.random() * ((max5 + 1) - min5)) + min5);
 
 var prikol1 = "http://ralip.ru/prikol/" + random1 + ".jpg";
 var prikol2 = "http://ralip.ru/prikol2/" + random2 + ".jpg";
 var prikol3 = "http://ralip.ru/prikol3/" + random3 + ".jpg";
+var prikol4 = "http://ralip.ru/prikol4/" + random4 + ".jpg";
+var prikol5 = "http://ralip.ru/prikol5/" + random5 + ".jpg";
 	 
 $("img#prikol1").attr("src", prikol1);
 $("img#prikol2").attr("src", prikol2);
 $("img#prikol3").attr("src", prikol3);
-$('span#like1').attr('data-identifier', random1);
-$('span#like2').attr('data-identifier', random2);
-$('span#like3').attr('data-identifier', random3);
+$("img#prikol4").attr("src", prikol4);
+$("img#prikol5").attr("src", prikol5);
 });		
 </script>
 
@@ -104,19 +112,26 @@ div.show()
     <div id="container1">
            <img id="prikol1" src='' />
 
-<span id="like1" class="likebtn-wrapper" data-theme="custom" data-btn_size="26" data-f_size="22" data-icon_size="22" data-icon_l="sml3-h" data-icon_l_url="/images/smile.gif" data-icon_l_url_v="/images/yes.gif" data-f_family="Impact" data-lang="ru" data-i18n_like="Прикольно" data-identifier="like" data-show_like_label="false" data-dislike_enabled="false" data-counter_zero_show="true" data-icon_dislike_show="false"  data-popup_width="6" data-share_size="small" data-loader_show="true" data-i18n_like_tooltip="Прикольно" data-i18n_unlike_tooltip="Отменить" data-i18n_share_text="Спасибо!" data-i18n_popup_text="Спасибо!"></span>
 </div>
 
 <div id="container2">
           <img id="prikol2" src='' />
 	
-<span id="like2" class="likebtn-wrapper" data-theme="custom" data-btn_size="26" data-f_size="22" data-icon_size="22" data-icon_l="sml3-h" data-icon_l_url="/images/smile.gif" data-icon_l_url_v="/images/yes.gif" data-f_family="Impact" data-lang="ru" data-i18n_like="Прикольно" data-identifier="like" data-show_like_label="false" data-dislike_enabled="false" data-counter_zero_show="true" data-icon_dislike_show="false"  data-popup_width="6" data-share_size="small" data-loader_show="true" data-i18n_like_tooltip="Прикольно" data-i18n_unlike_tooltip="Отменить" data-i18n_share_text="Спасибо!" data-i18n_popup_text="Спасибо!"></span>
 </div>
 
 <div id="container3">
            <img id="prikol3" src='' />
 
-<span id="like3" class="likebtn-wrapper" data-theme="custom" data-btn_size="26" data-f_size="22" data-icon_size="22" data-icon_l="sml3-h" data-icon_l_url="/images/smile.gif" data-icon_l_url_v="/images/yes.gif" data-f_family="Impact" data-lang="ru" data-i18n_like="Прикольно" data-identifier="like" data-show_like_label="false" data-dislike_enabled="false" data-counter_zero_show="true" data-icon_dislike_show="false"  data-popup_width="6" data-share_size="small" data-loader_show="true" data-i18n_like_tooltip="Прикольно" data-i18n_unlike_tooltip="Отменить" data-i18n_share_text="Спасибо!" data-i18n_popup_text="Спасибо!"></span>
+</div>
+
+<div id="container4">
+           <img id="prikol4" src='' />
+
+</div>
+
+<div id="container5">
+           <img id="prikol5" src='' />
+
 </div>
 
 </div>
