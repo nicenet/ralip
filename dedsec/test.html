@@ -15,6 +15,7 @@ el.style.display="none";
   <link rel="stylesheet" href="/resources/demos/style.css">
   <style>
   #draggable { width: 1120px; height: 480px; padding: 5; }
+  #draggable2 { width: 1000px; height: 480px; padding: 5; }
   </style>
   <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
@@ -37,11 +38,15 @@ el.style.display="none";
 										   
 <div id="draggable2" class="ui-widget-content style="display:block;">
 	<font>АДРЕС?</font>
-	<input type="text"> oninput: <span id="result"></span>
-	<script>
-    var site;
-		var input = site.body.children[0];
-  </script>
+	
+	<input type="text" id="find" name="plz" onchange="a_value(this);"/>
+<script type="text/javascript">
+function a_value(o)
+{
+alert(o.value);
+}
+</script>
+
 
 </div>
 										   
