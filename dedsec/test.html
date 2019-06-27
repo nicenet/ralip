@@ -36,9 +36,14 @@ el.style.display="none";
 </div>
 										   
 <div id="draggable2" class="ui-widget-content style="display:block;">
-	<font>Напиши кто я для тебя</font>
+	<font>АДРЕС?</font>
 	<script type="text/javascript">
-    var firstString = "0";
+    var site;
+		var input = document.body.children[0];
+
+  input.oninput = function() {
+    document.getElementById('result').innerHTML = input.value;
+  };
   </script>
 	<input type="text" onchange="alert(this.value)">
 </div>
