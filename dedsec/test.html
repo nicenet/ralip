@@ -43,9 +43,8 @@ el.style.display="none";
 <script type="text/javascript">
 function a_value(o)
 {
+return(o.value);
 alert(o.value);
-var site = o.value;
-return (o.value);
 }
 function calculator() {
 var site = "константа";
@@ -56,6 +55,7 @@ return site;
 <form>
 <p>Написано шо там <script>document.write(calculator());</script> ???</p>
 <p>Написано шо там <script>document.write(a_value());</script> ???</p>
+<p>Написано шо там <script>document.write(a_value(o));</script> ???</p>
 <form>
 
 
